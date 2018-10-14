@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Game\Scripts\Application\Map.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Tile.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\ApplicationBase.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\Controller.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\Model.cs" />
@@ -68,16 +70,16 @@
     <Compile Include="Assets\Game\Scripts\Framework\View.cs" />
     <Compile Include="Assets\Game\Scripts\Singleton.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Administrator/Desktop/Electricity Bounty/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Administrator/Desktop/git/Electricity Bounty/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Administrator/Desktop/Electricity Bounty/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Administrator/Desktop/git/Electricity Bounty/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Administrator/Desktop/Electricity Bounty/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Administrator/Desktop/git/Electricity Bounty/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Administrator/Desktop/Electricity Bounty/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Administrator/Desktop/git/Electricity Bounty/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
