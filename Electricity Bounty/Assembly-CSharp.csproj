@@ -61,14 +61,63 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Game\Scripts\Application\Map.cs" />
-    <Compile Include="Assets\Game\Scripts\Application\Tile.cs" />
+    <Compile Include="Assets\Game\Resources\3Dmodel\Holographic-Screens\AnimatedTextures.cs" />
+    <Compile Include="Assets\Game\Resources\3Dmodel\Low Poly Flat Sci Fi Assets\MainCharacter.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\1.Model\GameModel.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\1.Model\RoundModel.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\CountDownCompleteCommand.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\EndLevelCommand.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\EnterSceneComand.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\ExitSceneCommand.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\SellTowerCommand .cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\StartLevelCommand.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\StartUpCommand.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\3.Controller\UpgradeTowerCommand.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\EndLevelArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\SceneArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\SellTowerArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\ShowCreateArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\ShowUpgradeArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\SpawnMonsterArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\SpawnTowerArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\StartLevelArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\StartRoundArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\UpgradeTowerArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Consts.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Data\Level.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Data\Round.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Data\Tile.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Game.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Misc\Saver.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\BallBullet.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Bottle.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Bullet.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Electricity.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Fan.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\FanBullet.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Map.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Monster.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Role.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\Tower.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\StaticData\BulletInfo.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\StaticData\LuoboInfo.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\StaticData\MonsterInfo.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\StaticData\StaticData.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\StaticData\TowerInfo.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\ApplicationBase.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\Controller.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\Model.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\MVC.cs" />
+    <Compile Include="Assets\Game\Scripts\Framework\Pool\IReusable.cs" />
+    <Compile Include="Assets\Game\Scripts\Framework\Pool\ObjectPool.cs" />
+    <Compile Include="Assets\Game\Scripts\Framework\Pool\ReusbleObject.cs" />
+    <Compile Include="Assets\Game\Scripts\Framework\Pool\SubPool.cs" />
+    <Compile Include="Assets\Game\Scripts\Framework\Sound\Sound.cs" />
     <Compile Include="Assets\Game\Scripts\Framework\View.cs" />
+    <Compile Include="Assets\Game\Scripts\Game1\DoubleSlidingDoorController.cs" />
+    <Compile Include="Assets\Game\Scripts\Game1\FlickeringLight.cs" />
     <Compile Include="Assets\Game\Scripts\Singleton.cs" />
+    <None Include="Assets\Game\Resources\3Dmodel\Low Poly Flat Sci Fi Assets\Documentation\readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Administrator/Desktop/git/Electricity Bounty/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
