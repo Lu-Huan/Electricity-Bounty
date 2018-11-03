@@ -10,6 +10,7 @@ class StartUpCommand : Controller
         //注册模型（Model）
         RegisterModel(new GameModel());
         RegisterModel(new RoundModel());
+        RegisterModel(new MapModel());
 
         //注册命令（Controller）
         RegisterController(Consts.E_EnterScene, typeof(EnterSceneComand));//进入场景

@@ -17,8 +17,8 @@ public class Game : ApplicationBase<Game>
     {
         //---退出旧场景
         //造一个事件参数
-        SceneArgs e = new SceneArgs() 
-        { 
+        SceneArgs e = new SceneArgs()
+        {
             SceneIndex = SceneManager.GetActiveScene().buildIndex //当前场景索引
         };
         //发布事件
@@ -26,16 +26,20 @@ public class Game : ApplicationBase<Game>
 
         //---加载新场景
         SceneManager.LoadScene(level, LoadSceneMode.Single);
+        SceneManager.sceneLoaded += LoadedEve;
     }
-    void OnSceneLoaded(int level)
+
+    void LoadedEve(Scene s, LoadSceneMode l)
     {
-        Debug.Log("OnLevelWasLoaded:" + level);
+        if (l == LoadSceneMode.Single)
+        {
+            SceneManager.sceneLoaded -= LoadedEve;
+            //事件参数
+            SceneArgs e = new SceneArgs() { SceneIndex = s.buildIndex };
 
-        //事件参数
-        SceneArgs e = new SceneArgs() { SceneIndex = level };
-
-        //发布事件
-        SendEvent(Consts.E_EnterScene, e);
+            //发布事件
+            SendEvent(Consts.E_EnterScene, e);
+        }
     }
 
     //游戏入口

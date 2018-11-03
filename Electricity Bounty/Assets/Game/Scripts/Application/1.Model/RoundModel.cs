@@ -15,7 +15,7 @@ public class RoundModel : Model
 
     #region 字段
     List<Round> m_Rounds = new List<Round>();//该关卡所有的出怪信息
-    int m_RoundIndex = -1; //当前回合的索引
+    int m_RoundIndex = -1;             //当前回合的索引
     bool m_AllRoundsComplete = false; //是否所有怪物都出来了
     Coroutine m_Coroutine;
     #endregion
@@ -44,10 +44,10 @@ public class RoundModel : Model
     #endregion
 
     #region 方法
-    public void LoadLevel(Level level)
+    /*public void LoadLevel(Level level)
     {
         m_Rounds = level.Rounds;
-    }
+    }*/
 
     public void StartRound()
     {
@@ -58,7 +58,12 @@ public class RoundModel : Model
     {
         Game.Instance.StopCoroutine(m_Coroutine);
     }
-
+    public void CreateMonster()
+    {
+        m_Rounds.Add(new Round(1, 1));
+        m_Rounds.Add(new Round(1, 10));
+        StartRound();
+    }
     IEnumerator RunRound()
     {
         m_RoundIndex = -1;

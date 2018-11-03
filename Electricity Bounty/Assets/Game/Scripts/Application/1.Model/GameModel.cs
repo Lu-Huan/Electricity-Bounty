@@ -17,7 +17,7 @@ public class GameModel : Model
     //关卡
 
     //最大通关关卡索引
-    int m_GameProgress = -1;
+    int m_GameProgress = 3;
 
     //当前游戏的关卡索引
     int m_PlayLevelIndex = -1;

@@ -19,9 +19,6 @@ public class Level
     //金币
     public int InitScore;
 
-    //地图
-    public List<Tile> Map = new List<Tile>();
-
     //怪物行走的路径
     public List<Vector3> Path = new List<Vector3>();
 

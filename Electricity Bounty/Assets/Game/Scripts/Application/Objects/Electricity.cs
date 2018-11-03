@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public class Luobo : Role
+public class Electricity : Role
 {
     #region 常量
     #endregion

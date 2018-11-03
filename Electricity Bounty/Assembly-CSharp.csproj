@@ -62,9 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Game\Resources\3Dmodel\Holographic-Screens\AnimatedTextures.cs" />
-    <Compile Include="Assets\Game\Resources\3Dmodel\Low Poly Flat Sci Fi Assets\MainCharacter.cs" />
     <Compile Include="Assets\Game\Scripts\Application\1.Model\GameModel.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\1.Model\MapModel.cs" />
     <Compile Include="Assets\Game\Scripts\Application\1.Model\RoundModel.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\2.View\MapV.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\2.View\Spawner.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\2.View\StartGameEvent.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\2.View\UI_Game1.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\2.View\UI_ShowLevelImformation.cs" />
     <Compile Include="Assets\Game\Scripts\Application\3.Controller\CountDownCompleteCommand.cs" />
     <Compile Include="Assets\Game\Scripts\Application\3.Controller\EndLevelCommand.cs" />
     <Compile Include="Assets\Game\Scripts\Application\3.Controller\EnterSceneComand.cs" />
@@ -74,6 +79,7 @@
     <Compile Include="Assets\Game\Scripts\Application\3.Controller\StartUpCommand.cs" />
     <Compile Include="Assets\Game\Scripts\Application\3.Controller\UpgradeTowerCommand.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Args\EndLevelArgs.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Args\Follw.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Args\SceneArgs.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Args\SellTowerArgs.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Args\ShowCreateArgs.cs" />
@@ -95,7 +101,7 @@
     <Compile Include="Assets\Game\Scripts\Application\Objects\Electricity.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Objects\Fan.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Objects\FanBullet.cs" />
-    <Compile Include="Assets\Game\Scripts\Application\Objects\Map.cs" />
+    <Compile Include="Assets\Game\Scripts\Application\Objects\MainCharacter.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Objects\Monster.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Objects\Role.cs" />
     <Compile Include="Assets\Game\Scripts\Application\Objects\Tower.cs" />

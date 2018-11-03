@@ -5,9 +5,15 @@ using System.Text;
 
 public class Round
 {
-    public int Monster; //怪物类型ID
-    public int Count;   //怪物数量
 
+    public int Monster;
+  
+    public int Count;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="monster">怪物类型(ID索引)</param>
+    /// <param name="count">怪物数量</param>
     public Round(int monster, int count)
     {
         this.Monster = monster;

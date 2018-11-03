@@ -42,8 +42,7 @@ public class SubPool
 
         if (go == null)
         {
-            go = UnityEngine.Object.Instantiate(m_prefab);
-            go.transform.parent = m_parent;
+            go = UnityEngine.Object.Instantiate(m_prefab, m_parent, true);
             m_objects.Add(go);
         }
 

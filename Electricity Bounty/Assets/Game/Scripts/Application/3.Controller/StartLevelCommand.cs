@@ -10,14 +10,13 @@ class StartLevelCommand : Controller
         StartLevelArgs e = data as StartLevelArgs;
 
         //第一步
-        GameModel gModel = GetModel<GameModel>();
-        gModel.StartLevel(e.LevelIndex);
+        /*GameModel gModel = GetModel<GameModel>();
+        gModel.StartLevel(e.LevelIndex);*/
 
         //第二步
         RoundModel rModel = GetModel<RoundModel>();
-        rModel.LoadLevel(gModel.PlayLevel);
+        //rModel.LoadLevel(gModel.PlayLevel);
+        rModel.CreateMonster();
 
-        //进入游戏
-        Game.Instance.LoadScene(3);
     }
 }

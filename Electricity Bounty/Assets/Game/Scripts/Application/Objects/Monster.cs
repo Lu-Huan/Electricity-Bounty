@@ -16,10 +16,11 @@ public class Monster : Role
 
     #region 字段
     public MonsterType MonsterType = MonsterType.Monster0;//怪物类型    
-    float m_MoveSpeed;//移动速度（米/秒）
-    Vector3[] m_Path = null; //路径拐点
-    int m_PointIndex = -1; //当前拐点索引
+    float m_MoveSpeed=2;//移动速度（米/秒）
+    List<Vector3> m_Path = null; //路径
+    int m_PointIndex = 0; //当前索引
     bool m_IsReached = false;//是否到达终点
+    Transform transform;
     #endregion
 
     #region 属性
@@ -31,17 +32,11 @@ public class Monster : Role
     #endregion
 
     #region 方法
-    public void Load(Vector3[] path)
+    public void Load(List<Vector3> path)
     {
         m_Path = path;
         MoveNext();
     }
-
-    bool HasNext()
-    {
-        return (m_PointIndex + 1) < (m_Path.Length - 1);
-    }
-
     void MoveTo(Vector3 position)
     {
         transform.position = position;
@@ -49,24 +44,37 @@ public class Monster : Role
 
     void MoveNext()
     {
-        if (!HasNext())
-            return;
-
-        if (m_PointIndex == -1)
+        MoveTo(m_Path[m_PointIndex]);
+        m_PointIndex ++;
+        if (m_PointIndex == m_Path.Count)
         {
-            //刚刚出来，那就放置到起点位置
-            m_PointIndex = 0;
-            MoveTo(m_Path[m_PointIndex]);
+            //到达终点
+            m_IsReached = true;
+
+            //触发到达终点事件
+            if (Reached != null)
+                Reached(this);
         }
         else
         {
-            //不然就指定下一个目标位置
-            m_PointIndex++;
+            Vector3 Start = new Vector3(0, 0, 1);
+            Vector3 dir = m_Path[m_PointIndex] - m_Path[m_PointIndex - 1];
+            float angle = Vector3.Angle(Start, dir); //求出两向量之间的夹角
+            Vector3 normal = Vector3.Cross(Start, dir);//叉乘求出法线向量  
+
+            //求法线向量与物体上方向向量点乘，结果为1或-1，修正旋转方向 
+            angle *= Mathf.Sign(Vector3.Dot(normal, new Vector3(0, 1, 0)));  
+
+            transform.localRotation = Quaternion.Euler(new Vector3(0, angle, 0));
         }
     }
     #endregion
 
     #region Unity回调
+    private void Awake()
+    {
+        transform = GetComponent<Transform>();
+    }
     void Update()
     {
         //到达了终点
@@ -76,34 +84,20 @@ public class Monster : Role
         //当前位置
         Vector3 pos = transform.position;
         //目标位置
-        Vector3 dest = m_Path[m_PointIndex + 1];
+        Vector3 targe = m_Path[m_PointIndex];
+        //方向
+        Vector3 driection = m_Path[m_PointIndex]- m_Path[m_PointIndex-1];
+       
         //计算距离
-        float dis = Vector3.Distance(pos, dest);
-
+        float dis = Vector3.Distance(pos, targe);
         if (dis <= CLOSED_DISTANCE)
         {
-            //到达拐点
-            MoveTo(dest);
-
-            if (HasNext())
-                MoveNext();
-            else
-            {
-                //到达终点
-                m_IsReached = true;
-
-                //触发到达终点事件
-                if (Reached != null)
-                    Reached(this);
-            }
+            //到达目标
+            MoveNext();
         }
         else
         {
-            //移动的单位方向
-            Vector3 direction = (dest - pos).normalized;
-
-            //帧移动(米/帧 =  米/秒  * Time.deltaTime)
-            transform.Translate(direction * m_MoveSpeed * Time.deltaTime);
+            transform.position += driection * Time.deltaTime * m_MoveSpeed;
         }
     }
     #endregion

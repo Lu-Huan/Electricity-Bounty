@@ -19,13 +19,15 @@ public static class Consts
     //Model
     public const string M_GameModel = "M_GameModel";
     public const string M_RoundModel = "M_RoundModel";
+    public const string M_MapModel = "M_MapModel";
 
 
     //View
-    public const string V_Start = "V_Start";
+    public const string V_Start1 = "V_Start1";
+    public const string V_Start2 = "V_Start2";
     public const string V_Select = "V_Select";
     public const string V_Board = "V_Board";
-    public const string V_CountDown = "V_CountDown";
+    public const string V_ShowLevelImformation = "V_ShowLevelImformation";
     public const string V_Win = "V_Win";
     public const string V_Lost = "V_Lost";
     public const string V_Sytem = "V_Sytem";

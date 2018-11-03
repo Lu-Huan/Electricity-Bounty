@@ -9,8 +9,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
 public class FlickeringLight : MonoBehaviour {
-
-	Light light;
+    private Light light;
 	[SerializeField]
 	private float minWaitTime	= 0.1f;
 	[SerializeField]
